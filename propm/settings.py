@@ -25,7 +25,7 @@ SECRET_KEY = '72xwky_l05&mf(unv*k2xqk(vjoivq0m_c6=3hp8shb#ih2#a$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'birdlnw.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'nexuszix.pythonanywhere.com']
 
 
 # Application definition
@@ -79,7 +79,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
+    'mysql': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'nexuszix$propm',
+        'HOST': 'nexuszix.mysql.pythonanywhere-services.com',                                                                                                         
+        'USER': 'nexuszix',
+        'PASSWORD': 'P@ssw0rd',
+        'OPTION': {
+            'default-character-set': 'utf8',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
+    },
 }
 
 
